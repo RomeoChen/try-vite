@@ -12,7 +12,7 @@
     or
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
     (if using
-    <code>&ltscript setup&gt;</code>)
+    <code>&lt;script setup&gt;</code>)
   </p>
 
   <p>See <code>README.md</code> for more information.</p>
@@ -30,20 +30,21 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+    const count = ref(0);
+    return { count };
+  },
+});
 </script>
 
 <style scoped>
