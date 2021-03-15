@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    semi: 'warn',
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
   },
 };
