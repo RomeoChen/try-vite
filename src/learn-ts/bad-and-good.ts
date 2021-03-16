@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 interface User {
-  name: string,
-  age?: number,
+  name: string;
+  age?: number;
 }
 
 async function mockFetch() {
@@ -56,8 +56,7 @@ async function getUsersBad(): Promise<User[]> {
 }
 // good case
 function isUser(obj: unknown): obj is User {
-  return obj !== null
-    && typeof (obj as User).name === 'string';
+  return obj !== null && typeof (obj as User).name === 'string';
 }
 function isArrayOfUser(obj: unknown): obj is User[] {
   return Array.isArray(obj) && obj.every(isUser);
@@ -72,23 +71,23 @@ console.log('isArrayOfUser: ', isArrayOfUser(users));
  */
 // bad case
 interface Product1 {
-  id: string
-  type: 'digital' | 'physical'
-  price: number
-  weightInKg?: number
-  sizeInMb?: number
+  id: string;
+  type: 'digital' | 'physical';
+  price: number;
+  weightInKg?: number;
+  sizeInMb?: number;
 }
 // good case
 interface Product2 {
-  id: string
-  type: 'digital' | 'physical'
-  price: number
+  id: string;
+  type: 'digital' | 'physical';
+  price: number;
 }
 interface DigitalProduct extends Product2 {
-  type: 'digital'
-  sizeInMb: number
+  type: 'digital';
+  sizeInMb: number;
 }
 interface PhysicalProduct extends Product2 {
-  type: 'physical'
-  weightInKg: number
+  type: 'physical';
+  weightInKg: number;
 }
